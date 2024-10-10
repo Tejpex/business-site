@@ -11,7 +11,17 @@ app.get("/", (req, res) => {
 })
 
 app.post("/submit", (req, res) => {
-  res.render("index.ejs")
+  const { date, time, name, telNumber, email, guests, foodPreference, requests } = req.body
+  res.render("submit.ejs", { 
+    date: date, 
+    time: time, 
+    name: name, 
+    telNumber: telNumber, 
+    mail: email, 
+    numGuests: guests,
+    food: foodPreference,
+    allergies: requests
+  })
 })
 
 app.listen(port, () => {

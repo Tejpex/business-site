@@ -1,20 +1,5 @@
-<!DOCTYPE html>
-<html>
+<%- include("partials/header.ejs") %>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brunch House</title>
-  <link rel="stylesheet" href="/styles/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-</head>
-
-<body>
-  <header>
-    <h1>Brunch House</h1>
     <p class="info">Welcome to Brunch House where you can enjoy a wonderful meal with your friends. Fill out the form below to book a table for our Sunday brunches.</p>
   </header>
   <div class="form-section">
@@ -56,7 +41,7 @@
       <div class="inputfield">
         <label>
           Phone number:
-          <input required type="tel" name="tel-number" placeholder="### ### ### ###">
+          <input required type="tel" name="telNumber" placeholder="### ### ### ###">
         </label>
       </div>
 
@@ -77,7 +62,7 @@
       <div class="inputfield">
         <label>
           Food preference:
-          <select name="food-preference">
+          <select name="foodPreference">
             <option disabled selected>Choose an option</option>
             <option value="vegan">Vegan</option>
             <option value="vegetarian">Vegetarian</option>
@@ -102,7 +87,5 @@
       </div>
     </form>
   </div>
-  <footer>© Team star one 2024</footer>
-</body>
-
-</html>
+  
+<%- include("partials/footer.ejs") %>

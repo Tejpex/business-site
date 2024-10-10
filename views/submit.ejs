@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs") %>
+
+    <p class="info">Thank you for your booking. Here are your detalis.</p>
+  </header>
+  <div class="form-section">
+    <p>Date: <%= date %></p>
+    <p>Time: <%= time %>.00</p>
+    <p>Name: <%= name %></p>
+    <p>Phone number: <%= telNumber %></p>
+    <p>E-mail: <%= mail %></p>
+    <p>Number of guests: <%= numGuests %></p>
+    <p>Food preference: <%= food %></p>
+    <p>Special requests and food allergies:
+      <% if (locals.allergies) { %>
+        <%= allergies %>
+      <% } else { %>
+        None
+      <% } %>
+    </p>
+
+    <a href="/">
+      <button type="button">
+        Make a new booking
+      </button>
+    </a>
+  </div>
+
+<%- include("partials/footer.ejs") %>
